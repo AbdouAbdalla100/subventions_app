@@ -1,0 +1,3 @@
+<?php //Symfony%255CBundle%255CFrameworkBundle%255CTest%255CWebTestCase%2523assertResponseFormatSame
+
+return [PHP_INT_MAX, []];

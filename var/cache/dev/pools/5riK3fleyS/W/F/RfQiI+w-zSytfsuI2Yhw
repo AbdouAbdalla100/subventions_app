@@ -1,0 +1,3 @@
+<?php //PHPUnit%255CFramework%255CTestCase%2523expectError
+
+return [PHP_INT_MAX, []];

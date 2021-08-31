@@ -1,0 +1,14 @@
+# # config/packages/easy_admin.yaml
+# easy_admin:
+#    entities:
+#       Annonce:
+#           list:
+#               actions:
+#                   -
+    
+#         # Product:
+#         #  ...
+#         #   list:
+#         #    fields:
+#         #      - { property: 'picture', template: 'vich_uploader_image.html.twig' }
+#         #      - { property: 'PictureFile', type: 'file' }

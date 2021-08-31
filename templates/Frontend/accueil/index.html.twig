@@ -1,0 +1,191 @@
+{# {% extends '@EasyAdmin/page/content.html.twig' %} #}
+{% extends 'base.html.twig' %}
+{% block head %}
+
+    {# <meta charset="utf-8"> #}
+    {% block stylesheets %} 
+        <link rel="stylesheet" href="{{ asset('bundles/css/reset.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('bundles/css/grid.css') }}">
+    {% endblock %}
+
+    {% block javascripts %}   
+    <script src="{{ asset('bundles/js/jquery-1.6.3.min.js') }}"></script>
+    <script src="{{ asset('bundles/js/cufon-yui.js') }}"></script>
+    <script src="{{ asset('bundles/js/cufon-replace.js') }}"></script>
+    <script src="{{ asset('bundles/js/NewsGoth_400.font.js') }}"></script>
+	<script src="{{ asset('bundles/js/NewsGoth_700.font.js') }}"></script>
+    <script src="{{ asset('bundles/js/NewsGoth_Lt_BT_italic_400.font.js') }}"></script>
+    <script src="{{ asset('bundles/js/Vegur_400.font.js') }}"></script> 
+    <script src="{{ asset('bundles/js/FF-cash.js') }}"></script>
+    <script src="{{ asset('bundles/js/jquery.featureCarousel.js') }}"></script>     
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $("#carousel").featureCarousel({
+			autoPlay:7000,
+			trackerIndividual:false,
+			trackerSummation:false,
+			topPadding:50,
+			smallFeatureWidth:.9,
+			smallFeatureHeight:.9,
+			sidePadding:0,
+			smallFeatureOffset:0
+		});
+      });
+    </script> 
+    {% endblock %}
+	<!--[if lt IE 7]>
+    <div style=' clear: both; text-align:center; position: relative;'>
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+        	<img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+    </div>
+	<![endif]-->
+    <!--[if lt IE 9]>
+   		<script type="text/javascript" src="js/html5.js"></script>
+        <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">
+	<![endif]-->
+
+
+
+{% endblock head %}
+
+
+{% block body %}
+
+    <div id="page1">
+        <div class="extra">
+            {# <!--==============================header=================================--> #}
+            <header>
+                <div class="row-top">
+                    <div class="main">
+                        <div class="wrapper">
+                            <h1><a href="index.html">Subvention</a></h1>
+                            <form id="search-form" method="post" enctype="multipart/form-data">
+                            <fieldset>	
+                                <div class="search-field">
+                                    <input name="search" type="text" value="Search..." onBlur="if(this.value=='') this.value='Search...'" onFocus="if(this.value =='Search...' ) this.value=''" />
+                                    <a class="search-button" href="#" onClick="document.getElementById('search-form').submit()"></a>	
+                                </div>						
+                            </fieldset>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-row">
+                    <div class="menu-bg">
+                        <div class="main">
+                            <nav class="indent-left">
+                                <ul class="menu wrapper">
+                                    <li class="active"><a href="index.html">Home page</a></li>
+                                    <li><a href="company.html">S'inscrire</a></li>
+                                    <li><a href="services.html">Visiter les Annonces</a></li>
+                                    {# <li><a href="projects.html">our projects</a></li> #}
+                                    <li><a href="contact.html">Contacter Nous</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-bot">
+                    <div class="center-shadow">
+                        <div class="carousel-container">
+                        <div id="carousel">
+                            <div class="carousel-feature">
+                            <a href="index.html.twig"><img class="carousel-image" alt="" src="{{ asset('bundles/images/subvention1.png') }}"></a>                          
+                            </div>
+                            <div class="carousel-feature">
+                            <a href="#"><img class="carousel-image" alt="" src="{{ asset('bundles/images/subvention3.jpg') }}"></a>
+                            </div>
+                            <div class="carousel-feature">
+                            <a href="#"><img class="carousel-image" alt="" src="{{ asset('bundles/images/subvention6.jpg') }}"></a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!--==============================content================================-->
+            <section id="content"><div class="ic">More Website Templates @ TemplateMonster.com. December10, 2011!</div>
+                <div class="main">
+                    <div class="container_12">
+                        <div class="wrapper">
+                            <article class="grid_8">
+                            
+                            </article>
+                            <article class="grid_4">
+                               
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="block"></div>
+            </section>
+        </div>
+        
+        <!--==============================footer=================================-->
+        <footer>
+            <div class="padding">
+                <div class="main">
+                    <div class="container_12">
+                        <div class="wrapper">
+                            <article class="grid_8">
+                                <h4>Contact Form:</h4>
+                                <form id="contact-form" method="post">
+                                    <fieldset>
+                                        <label><input name="email" value="Email" onBlur="if(this.value=='') this.value='Email'" onFocus="if(this.value =='Email' ) this.value=''" /></label>
+                                        <label><input name="subject" value="Subject" onBlur="if(this.value=='') this.value='Subject'" onFocus="if(this.value =='Subject' ) this.value=''" /></label>
+                                        <textarea onBlur="if(this.value=='') this.value='Message'" onFocus="if(this.value =='Message' ) this.value=''">Message</textarea>
+                                        <div class="buttons">
+                                            <a href="#" onClick="document.getElementById('contact-form').reset()">Clear</a>
+                                            <a href="#" onClick="document.getElementById('contact-form').submit()">Send</a>
+                                        </div>											
+                                    </fieldset>           
+                                </form>
+                            </article>
+                            <article class="grid_4">
+                                <h4 class="indent-bot">Link to Us:</h4>
+                                <ul class="list-services border-bot img-indent-bot">
+                                    <li><a href="#">Facebook</a></li>
+                                    <li><a class="item-1" href="#">Twitter</a></li>
+                                    <li><a class="item-2" href="#">Picassa</a></li>
+                                    <li><a class="item-3" href="#">You Tube</a></li>
+                                </ul>
+                                <p class="p1">Consulting.com &copy; 2011 </p>
+                                <p class="p1">Website Template by <a class="link" target="_blank" href="http://store.templatemonster.com?aff=netsib1" rel="nofollow">TemplateMonster.com</a></p>
+                                {# <!-- {%FOOTER_LINK} --> #}
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script type="text/javascript"> Cufon.now(); </script>
+
+
+
+    {# <form method="POST" action="{{path('admin')}}">
+        <div class="header">
+            <img name = "accueil" src = "{{ asset('imges/accueil.png') }}">
+            <a href = "#"> <img name = "inscription" src = "imges/insc.png"> inscrire </a>
+            <a href = "#"> <img name = "inscription" src = "imges/org.png"> inscrire </a>
+            <a href = "#"> <img name = "inscription" src = "imges/annonce.png"> Visiter les Annonces </a>
+        </div>
+        <div class="container">
+        </div>
+        <div class="footer">
+        </div>
+        {{ form_rest(form)}}
+    </form> #}
+{% endblock %}
+
+
+
+
+{# <!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+</body>
+</html> #}

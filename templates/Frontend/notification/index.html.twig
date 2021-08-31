@@ -1,0 +1,49 @@
+{% extends '@EasyAdmin/page/content.html.twig' %}
+{# {% extends 'base.html.twig' %} #}
+{% block title %}Envoi des notifications{% endblock %}
+{% block body %}
+
+<form method="POST" action="{{path('notification')}}">
+    <script>
+        document.write (getElement By id('envoyer'));
+    </script>
+    <div clas="page_content">
+        <div class="row">
+            <h2 align="center">Liste des Utilisateurs à notifier</h2>
+            <div class="col-12">
+
+            
+                <table class="table">
+                    <thead class="thead-light-blue">
+                        <tr>
+                            <th scop="col">Nom</th>
+                            <th scop="col">Prenom</th>
+                            {# <th scop="col">Date de Naissance</th> #}
+                            <th scop="col">Adresse</th> 
+                            <th scop="col">Notification</th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% if users is defined %}
+                        {% for user in users %}
+                            <tr>
+                                <td>{{ user.nom }}</td>
+                                <td>{{ user.prenom }}</td>
+                                {# <td>{{ user.dateNaiss }}</td> #}
+                                <td>{{ user.adresse }}</td>
+                                <td>{{ user.notification }}</td>
+                            </tr>
+                        {% endfor %}
+                        {% endif %}
+                    <tbody>
+                </table>
+                 <input type="hidden" name = 'annonce_id' value={{annonce}}>
+                {# <button name='envoyer' type='submit'>Envoyer</button> #}
+                <input type="submit" value="Envoyer" id="envoyer">
+            </div>
+        </div>
+    </div>
+    
+    {# {{ form_rest(form)}} #}
+</form>
+{% endblock %}

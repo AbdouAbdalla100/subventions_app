@@ -1,0 +1,42 @@
+{# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+{% block page_title 'Subvention Dashboard' %}
+
+{% block page_content %}
+    <div clas="page_content">
+        <div class="row">
+            <div class="cls-6 alert-info">
+                <spam class="display-6"> {{ countAllOrganisme }} </spam> Organisme
+            </div>
+            <div class="cls-6 alert-success" >
+                 <spam class="display-6"> {{ countAllUser }} </spam> User
+            </div>
+        </div>
+        <div class="row">
+            <h2 align="center">Liste des Annonces</h2>
+            <div class="col-12">
+                <table class="table">
+                    <thead class="thead-light-blue">
+                        <tr>
+                            <th scop="col">Titre</th>
+                            <th scop="col">Libellé</th>
+                            <th scop="col">Concerné</th>
+                            <th scop="col">Consigne</th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for annonce in annonces %}
+                            <tr><td>{{ annonce.titre }}</td>
+                                <td>{{ annonce.libelle }}</td>
+                                <td>{{ annonce.concerne }}</td>
+                                <td>{{ annonce.consigne }}</td>
+                            </tr>
+                        {% endfor %}
+                    <tbody>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+{% endblock %}

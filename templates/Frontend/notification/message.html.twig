@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+{% block title %}Envoi des notifications{% endblock %}
+{% block body %}
+    <div clas="page_content">
+        <div class="row">
+            {# <h2 align="center">Liste des Utilisateurs à notifier</h2> #}
+            <div class="col-12">
+                {% if annonce is defined %}
+                    {# {% for annonce in annonces %} #}
+                        Subvention de {{ annonce.titre }} portant sur <br/>
+                        {{ annonce.libelle }}
+                    {# {% endfor %} #}
+                {% endif %}
+                
+
+                {# <table class="table">
+                    <thead class="thead-light-blue">
+                        <tr>
+                            <th scop="col">Titre</th>
+                            <th scop="col">Libelle</th>
+                            <th scop="col">Concerne</th>
+                            <th scop="col">Consigne</th> 
+                            <th scop="col">Organisme</th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if annonces is defined %}
+                        {% for annonce in annonces %}
+                            <tr>
+                                <td>{{ annonce.titre }}</td>
+                                <td>{{ annonce.libelle }}</td>
+                                <td>{{ annonce.concerne }}</td>
+                                <td>{{ annonce.consigne }}</td>
+                                <td>{{ annonce.organisme.nom }}</td>
+                            </tr>
+                        {% endfor %}
+                        {% endif %}
+                    <tbody>
+                </table> #}
+            </div>
+        </div>
+    </div>
+{% endblock body %}

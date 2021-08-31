@@ -1,0 +1,25 @@
+{# {% extends '@EasyAdmin/page/content.html.twig' %} #}
+{% extends 'base.html.twig' %}
+{% block title %}Envoi des notifications{% endblock %}
+{% block body %}
+    <style>
+        p { font-family: 'vivaldi'; font-size: 45px; }
+        input[type=submit] { border-radius: 5px; margin: 5px; padding: 9px; width: 100px; font-family: 'verdana'; }
+        .content { 
+            height: 150px; 
+            width: 550px; 
+            margin: 90px; 
+            padding: 0px; 
+            left: 150px;
+            border-radius: 45px;
+            text-align: center;
+            background-color: #1234;
+            }
+    </style>
+    <div class="content">
+        <form methode="POST" action="{{path('admin')}}">
+            <p>Notification envoyer avec succes</p>
+            <input type="submit" value = "Accueil">
+        </form>
+    </div>
+{% endblock body %}

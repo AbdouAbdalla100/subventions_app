@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello FormOrganismeController!{% endblock %}
+
+{% block body %}
+
+<form method="POST" action="{{path('form_organisme')}}">
+<style>
+            .row {
+                width: 500px;
+                hight: 550px;
+                background-color: #1234;
+                margin-left: 350px;
+                padding: 20px;
+                font-family: verdana;
+                border-radius: 15px;
+            }
+            label {
+                margin: 10px;
+                padding: 15px;
+            }
+            {# h2 {font-family: verdana; } #}
+            .col {
+                width: 500px;
+                hight: 150px;
+            }
+            input[type=text] {
+                margin: 5px;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            input[type=submit] {
+                margin-left: 200px;
+                top: 400px;
+                padding: 9px;
+                border-radius: 5px;
+            }
+            input[type=date_time] { margin-left: 20px; padding: 0px; border-radius: 5px; }
+            input[type=select] { margin-left: 20px; padding: 9px; border-radius: 5px; }
+</style>
+{{ form_start(form) }}
+
+<div class="row">
+    <table>
+        <h3 align="center"> Souscrire </h3>    
+        <tr>
+            <td>Nom</td>
+            <td>{{ form_widget(form.nom)}}</td>
+        </tr>
+        <tr>
+        <td>Adresse</td>
+            <td>{{ form_widget(form.adresse) }}<td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Enregistrer"></td>
+        </tr>
+    </table>
+</div>
+{{ form_rest(form)}}
+</form>
+{% endblock %}
+{# 
+
+
+
+<div class="form-group col-md-6">
+<input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name" required>
+</div>
+</div>
+<div class="form-group">
+<input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Email" required>
+</div>
+<div class="form-row">
+<div class="form-group col-md-6">
+<input name="country" type="text" class="form-control country_selector" onfocus="if (!window.__cfRLUnblockHandlers) return false; this.value=''" required data-cf-modified-1cd56c90e9a911135771f6d5-="">
+</div>
+<div class="form-group col-md-6">
+<input type="text" class="form-control" id="city" name="city" placeholder="City" required>
+</div>
+</div> #}
